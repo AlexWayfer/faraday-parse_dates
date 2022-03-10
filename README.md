@@ -1,6 +1,6 @@
 # Faraday Parse Dates
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/AlexWayfer/faraday-parse_dates/ci)](https://github.com/AlexWayfer/faraday-parse_dates/actions?query=branch%3Amain)
+[![Cirrus CI - Base Branch Build Status](https://img.shields.io/cirrus/github/AlexWayfer/faraday-parse_dates?style=flat-square)](https://cirrus-ci.com/github/AlexWayfer/faraday-parse_dates)
 [![Gem](https://img.shields.io/gem/v/faraday-parse_dates.svg?style=flat-square)](https://rubygems.org/gems/faraday-parse_dates)
 [![License](https://img.shields.io/github/license/AlexWayfer/faraday-parse_dates.svg?style=flat-square)](LICENSE.md)
 
