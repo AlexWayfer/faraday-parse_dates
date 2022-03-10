@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'time'
+
 module Faraday
   module ParseDates
     # This class provides the main implementation for your middleware.
@@ -15,15 +17,11 @@ module Faraday
     #   (see "retry" middleware: https://github.com/lostisland/faraday/blob/main/lib/faraday/request/retry.rb#L142).
     #   IMPORTANT: Remember to call `@app.call(env)` or `super` to not interrupt the middleware chain!
     class Middleware < Faraday::Middleware
-      # This method will be called when the request is being prepared.
-      # You can alter it as you like, accessing things like request_body, request_headers, and more.
-      # Refer to Faraday::Env for a list of accessible fields:
-      # https://github.com/lostisland/faraday/blob/main/lib/faraday/options/env.rb
-      #
-      # @param env [Faraday::Env] the environment of the request being processed
-      def on_request(env)
-        # Do something with the request environment...
-        # This method is optional.
+      ISO_DATE_FORMAT = /\A\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|((\+|-)\d{2}:?\d{2}))\Z/xm.freeze
+
+      def initialize(app, options = {})
+        @regexp = options[:match] || ISO_DATE_FORMAT
+        super(app)
       end
 
       # This method will be called when the response is being processed.
@@ -33,8 +31,22 @@ module Faraday
       #
       # @param env [Faraday::Env] the environment of the response being processed.
       def on_complete(env)
-        # Do something with the response environment...
-        # This method is optional.
+        parse_dates! env[:body]
+      end
+
+      private
+
+      def parse_dates!(value)
+        case value
+        when Hash
+          value.each { |key, element| value[key] = parse_dates!(element) }
+        when Array
+          value.each_with_index { |element, index| value[index] = parse_dates!(element) }
+        when @regexp
+          Time.parse(value)
+        else
+          value
+        end
       end
     end
   end
