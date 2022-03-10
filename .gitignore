@@ -1,5 +1,6 @@
 .idea/
 .bundle/
+node_modules/
 .yardoc
 _yardoc/
 coverage/
@@ -10,6 +11,7 @@ tmp/
 
 *.gem
 Gemfile.lock
+package-lock.json
 
 .rvmrc
 .ruby-version
