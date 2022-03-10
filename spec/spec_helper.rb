@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'pry-byebug'
+
 require 'faraday'
 require_relative '../lib/faraday/parse_dates'
 
