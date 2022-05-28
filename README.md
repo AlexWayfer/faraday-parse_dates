@@ -31,7 +31,10 @@ gem install faraday-parse_dates
 ```ruby
 require 'faraday/parse_dates'
 
-# TODO
+connection = Faraday.new do |faraday|
+  ## This gem only decodes responses
+  faraday.response :parse_dates
+end
 ```
 
 ## Development
