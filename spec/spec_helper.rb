@@ -3,6 +3,16 @@
 require 'pry-byebug'
 
 require 'faraday'
+
+require 'simplecov'
+
+if ENV['CI']
+  require 'simplecov-cobertura'
+  SimpleCov.formatter = SimpleCov::Formatter::CoberturaFormatter
+end
+
+SimpleCov.start
+
 require_relative '../lib/faraday/parse_dates'
 
 module ResponseMiddlewareExampleGroup
