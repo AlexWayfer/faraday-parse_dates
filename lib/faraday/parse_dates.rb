@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'faraday'
+
 require_relative 'parse_dates/middleware'
 require_relative 'parse_dates/version'
 
