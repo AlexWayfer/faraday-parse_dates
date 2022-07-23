@@ -25,6 +25,6 @@ module Faraday
     # Faraday::Request.register_middleware(parse_dates: Faraday::ParseDates::Middleware)
     #
     # Load middleware with conn.response :parse_dates
-    # Faraday::Response.register_middleware(parse_dates: Faraday::ParseDates::Middleware)
+    Faraday::Response.register_middleware(parse_dates: Faraday::ParseDates::Middleware)
   end
 end

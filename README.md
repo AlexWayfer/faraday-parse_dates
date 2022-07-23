@@ -38,6 +38,9 @@ require 'faraday/parse_dates'
 connection = Faraday.new do |faraday|
   ## This gem only decodes responses
   faraday.response :parse_dates
+
+  ## Alternatively, you can use `use`
+  # faraday.use :parse_dates
 end
 ```
 
