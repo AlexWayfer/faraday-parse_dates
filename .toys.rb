@@ -8,12 +8,12 @@ expand GemToys::Template
 alias_tool :g, :gem
 
 tool :console do
-	def run
-		require_relative 'lib/<%= path %>'
+  def run
+    require_relative 'lib/faraday/parse_dates'
 
-		require 'pry'
-		Pry.start
-	end
+    require 'pry'
+    Pry.start
+  end
 end
 
 alias_tool :c, :console

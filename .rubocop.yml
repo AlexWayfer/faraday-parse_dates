@@ -37,6 +37,7 @@ Packaging/RequireRelativeHardcodingLib:
   Exclude:
     - bin/**/*
     - spec/**/*
+    - .toys.rb
 
 RSpec/NestedGroups:
   Enabled: false
