@@ -44,6 +44,15 @@ connection = Faraday.new do |faraday|
 end
 ```
 
+### Order note
+
+It can doesn't work being placed after `faraday.response :json` or similar middlewares,
+but can work before them. Check the order and results.
+
+The issue about this: https://github.com/lostisland/faraday/issues/1458.
+
+And please read middlewares documentation carefully: https://lostisland.github.io/faraday/middleware/
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies.
