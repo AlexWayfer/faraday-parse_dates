@@ -49,9 +49,9 @@ end
 It can doesn't work being placed after `faraday.response :json` or similar middlewares,
 but can work before them. Check the order and results.
 
-The issue about this: https://github.com/lostisland/faraday/issues/1458.
+The issue about this: <https://github.com/lostisland/faraday/issues/1458>
 
-And please read middlewares documentation carefully: https://lostisland.github.io/faraday/middleware/
+And please read middlewares documentation carefully: <https://lostisland.github.io/faraday/middleware/>
 
 ## Development
 
