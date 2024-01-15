@@ -17,7 +17,7 @@ module Faraday
     #   (see "retry" middleware: https://github.com/lostisland/faraday/blob/main/lib/faraday/request/retry.rb#L142).
     #   IMPORTANT: Remember to call `@app.call(env)` or `super` to not interrupt the middleware chain!
     class Middleware < Faraday::Middleware
-      ISO_DATE_FORMAT = /\A\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|((\+|-)\d{2}:?\d{2}))\Z/xm.freeze
+      ISO_DATE_FORMAT = /\A\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|((\+|-)\d{2}:?\d{2}))\Z/xm
 
       def initialize(app, options = {})
         @regexp = options[:match] || ISO_DATE_FORMAT
