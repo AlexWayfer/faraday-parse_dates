@@ -28,7 +28,8 @@ module ResponseMiddlewareExampleGroup
 
   def process(body, content_type = nil, options = {})
     env = {
-      body: body, request: options,
+      body:,
+      request: options,
       request_headers: Faraday::Utils::Headers.new,
       response_headers: Faraday::Utils::Headers.new(headers)
     }
