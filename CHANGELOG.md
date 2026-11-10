@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+*   Drop Ruby 3.2 support (end of life).
+
 ## 1.0.0 (2026-02-09)
 
 *   Drop Ruby 2.5, 2.6, 2.7, 3.0 and 3.1 support.
