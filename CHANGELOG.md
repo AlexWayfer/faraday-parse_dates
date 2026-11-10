@@ -2,8 +2,16 @@
 
 ## Unreleased
 
+## 1.1.0 (2026-11-10)
+
 *   Drop Ruby 3.2 support (end of life).
+*   Update Faraday dependency to 2.15.
+*   Update development dependencies and Toys configuration.
+*   Migrate CI from Cirrus CI to GitHub Actions.
 *   Publish tagged gem releases through GitHub Actions.
+*   Authenticate Codecov uploads with GitHub OIDC.
+*   Replace the Code Climate badge with Qlty maintainability.
+*   Remove the broken Inch CI badge.
 
 ## 1.0.0 (2026-02-09)
 
