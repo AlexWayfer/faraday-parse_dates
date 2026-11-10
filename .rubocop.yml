@@ -11,7 +11,7 @@ inherit_mode:
 AllCops:
   DisplayCopNames: true
   DisplayStyleGuide: true
-  TargetRubyVersion: 3.2
+  TargetRubyVersion: 3.3
   SuggestExtensions: false
   NewCops: enable
 
