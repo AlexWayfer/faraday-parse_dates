@@ -94,6 +94,9 @@ jobs:
     needs: changes
     if: github.ref_name == 'main' || needs.changes.outputs.rspec == 'true'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     strategy:
       fail-fast: false
       matrix:
@@ -112,4 +115,5 @@ jobs:
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v7
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+          use_oidc: true
+          fail_ci_if_error: true
