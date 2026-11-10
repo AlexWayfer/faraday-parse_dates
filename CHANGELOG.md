@@ -3,6 +3,7 @@
 ## Unreleased
 
 *   Drop Ruby 3.2 support (end of life).
+*   Publish tagged gem releases through GitHub Actions.
 
 ## 1.0.0 (2026-02-09)
 

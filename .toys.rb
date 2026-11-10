@@ -3,7 +3,7 @@
 include :bundler, static: true
 
 require 'gem_toys'
-expand GemToys::Template
+expand GemToys::Template, publish_gem: false
 
 tool :g, delegate_relative: :gem
 
