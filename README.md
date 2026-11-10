@@ -1,6 +1,6 @@
 # Faraday Parse Dates
 
-[![Cirrus CI - Base Branch Build Status](https://img.shields.io/cirrus/github/AlexWayfer/faraday-parse_dates?style=flat-square)](https://cirrus-ci.com/github/AlexWayfer/faraday-parse_dates)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/AlexWayfer/faraday-parse_dates/ci.yml?branch=main&style=flat-square)](https://github.com/AlexWayfer/faraday-parse_dates/actions/workflows/ci.yml)
 [![Codecov branch](https://img.shields.io/codecov/c/github/AlexWayfer/faraday-parse_dates/main.svg?style=flat-square)](https://codecov.io/gh/AlexWayfer/faraday-parse_dates)
 [![Code Climate](https://img.shields.io/codeclimate/maintainability/AlexWayfer/faraday-parse_dates.svg?style=flat-square)](https://codeclimate.com/github/AlexWayfer/faraday-parse_dates)
 [![Depfu](https://img.shields.io/depfu/AlexWayfer/faraday-parse_dates?style=flat-square)](https://depfu.com/repos/github/AlexWayfer/faraday-parse_dates)
