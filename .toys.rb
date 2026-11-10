@@ -5,7 +5,7 @@ include :bundler, static: true
 require 'gem_toys'
 expand GemToys::Template
 
-alias_tool :g, :gem
+tool :g, delegate_relative: :gem
 
 tool :console do
   def run
@@ -16,4 +16,4 @@ tool :console do
   end
 end
 
-alias_tool :c, :console
+tool :c, delegate_relative: :console
